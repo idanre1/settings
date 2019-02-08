@@ -1,0 +1,37 @@
+
+# shell
+alias l='less'
+alias la='ls -la'
+alias lr='la -tr'
+alias sa='source /nas/settings/alias'
+alias ttar='tar -czf'
+alias untar='tar -xzf'
+alias ttar2='tar -cjf'
+alias untar2='tar -xjf'
+alias rm='rm -rf'
+
+#help
+helpme_f() {
+grep "$*" /help
+}
+alias helpme='helpme_f'
+
+
+# systemctl
+alias st='sudo systemctl status'
+alias ctl='sudo systemctl'
+alias log='journalctl -xe'
+
+# X11
+alias sux11='sudo xauth add $(xauth -f ~linaro/.Xauthority list|tail -1)'
+
+# apt-get
+alias apt-yes='sudo DEBIAN_FRONTEND=noninteractive apt-get -y '
+
+# Arduino
+alias ard-up='make FLOW=ARD upload reset_stty'
+alias ard-mon='make FLOW=ARD monitor'
+alias ard-uno='export BOARD_TAG=uno; export MONITOR_PORT=/dev/ttyACM0'
+
+# Ansible
+alias an='ansible -i /nas/settings/ansible/inventory.cfg all -u linaro '
