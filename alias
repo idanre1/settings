@@ -6,10 +6,15 @@ alias lr='la -tr'
 alias sa='source /nas/settings/alias'
 alias ttar='tar -czf'   # .tar.gz
 alias untar='tar -xzf'
-alias ttar2='tar -cjf'
+alias ttar2='tar -cjf'  # .tar.bz
 alias untar2='tar -xjf'
 alias ttarx='tar -cJf' # .tar.xz
+<<<<<<< HEAD
 alias untarx='tar -xJf'alias rm='rm -rf'
+=======
+alias untarx='tar -xJf'
+alias rm='rm -rf'
+>>>>>>> 094bf76783319d64416a58ef1f892c20df8b7b8f
 
 #help
 helpme_f() {
