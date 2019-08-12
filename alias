@@ -22,7 +22,8 @@ alias helpme='helpme_f'
 # systemctl
 alias st='sudo systemctl status'
 alias ctl='sudo systemctl'
-alias log='journalctl -xe'
+#alias log='journalctl -xe'
+alias log='journalctl -b -f -l --no-pager'
 
 # X11
 alias sux11='sudo xauth add $(xauth -f ~linaro/.Xauthority list|tail -1)'
