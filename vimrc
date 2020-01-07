@@ -13,7 +13,10 @@ map <C-Home> gg<enter>
 
 
 
-set tabstop=3 shiftwidth=3 expandtab
+"set tabstop=4 shiftwidth=4 expandtab
+"https://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces
+"noexpandtab - use tabs as tabs, don't replace with spaces
+set tabstop=4 shiftwidth=4 noexpandtab
 map <F2> :RetabIndent <CR>
 
 "http://vim.wikia.com/wiki/Super_retab#Script
