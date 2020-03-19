@@ -1,7 +1,7 @@
 
 # shell
 alias l='less'
-alias la='ls -la'
+alias la='ls -lah'
 alias lr='la -tr'
 alias sa='source /nas/settings/alias'
 alias ttar='tar -czf'   # .tar.gz
