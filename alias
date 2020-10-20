@@ -39,3 +39,7 @@ alias ard-uno='export BOARD_TAG=uno; export MONITOR_PORT=/dev/ttyACM0'
 
 # Ansible
 alias an='ansible -i /nas/settings/ansible/inventory.cfg all -u linaro '
+
+# SSH
+# ssh with a specific key
+alias sshkey='ssh -o "IdentitiesOnly=yes" -i ' # sshkey <key> <hostname>
