@@ -43,3 +43,4 @@ alias an='ansible -i /nas/settings/ansible/inventory.cfg all -u linaro '
 # SSH
 # ssh with a specific key
 alias sshkey='ssh -o "IdentitiesOnly=yes" -i ' # sshkey <key> <hostname>
+alias scpkey='scp -r -o "IdentitiesOnly=yes" -i ' # fetch: scpkey <key> <hostname>:<remote_directory> <local_directory>
