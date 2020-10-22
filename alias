@@ -12,7 +12,8 @@ alias ttarx='tar -cJf' # .tar.xz
 alias untarx='tar -xJf'
 alias rm='rm -rf'
 alias bgrun='nohup ' #https://askubuntu.com/questions/8653/how-to-keep-processes-running-after-ending-ssh-session
-alias gitssh='eval $(ssh-agent -s); ssh-add'
+alias gitssh='eval $(ssh-agent -s); ssh-add ~/.ssh/gitea'
+alias ci='git add .; git commit .'
 
 #help
 helpme_f() {
