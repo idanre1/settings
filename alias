@@ -15,12 +15,22 @@ alias bgrun='nohup ' #https://askubuntu.com/questions/8653/how-to-keep-processes
 alias gitssh='eval $(ssh-agent -s); ssh-add ~/.ssh/gitea'
 alias ci='git add .; git commit .'
 
+# python
+source ~/scripts/python_init.sh
+
 #help
 helpme_f() {
 grep "$*" /help
 }
 alias helpme='helpme_f'
 
+# SSH
+# ssh with a specific key
+alias sshkey='ssh -o "IdentitiesOnly=yes" -i ' # sshkey <key> <hostname>
+alias scpkey='scp -r -o "IdentitiesOnly=yes" -i ' # fetch: scpkey <key> <hostname>:<remote_directory> <local_directory>
+
+# git
+alias ci='git commit -a'
 
 # systemctl
 alias st='sudo systemctl status'
@@ -43,7 +53,3 @@ alias ard-uno='export BOARD_TAG=uno; export MONITOR_PORT=/dev/ttyACM0'
 # Ansible
 alias an='ansible -i /nas/settings/ansible/inventory.cfg all -u linaro '
 
-# SSH
-# ssh with a specific key
-alias sshkey='ssh -o "IdentitiesOnly=yes" -i ' # sshkey <key> <hostname>
-alias scpkey='scp -r -o "IdentitiesOnly=yes" -i ' # fetch: scpkey <key> <hostname>:<remote_directory> <local_directory>
