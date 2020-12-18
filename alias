@@ -16,7 +16,7 @@ alias gitssh='eval $(ssh-agent -s); ssh-add ~/.ssh/gitea'
 alias ci='git add .; git commit .'
 
 # python
-source ~/scripts/python_init.sh
+source ~/settings/python_init.sh
 
 #help
 helpme_f() {
