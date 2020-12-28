@@ -8,7 +8,35 @@ export PAGER=less     # contains command to run the program used to list the con
 export HISTSIZE=9999     # The number of commands normally stored in the history fileexport LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 
 #prompt
-PROMPT_COMMAND='PS1="\[\033[1;33m\]H\!\[\e[0;35m\]J\j\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; else echo "\\[\\033[31m\\]"; fi\``/bin/ls -1 | /usr/bin/wc -l | /bin/sed "s: ::g"`files@`/bin/ls -lah | /bin/grep -m 1 total | /bin/sed "s/total //"`\[\033[1;37m\]:\[\e[1;34m\]\`if [[ `pwd|wc -c|tr -d " "` > 18 ]]; then echo "\\W"; else echo "\\w"; fi\`\[\033[1;37m\]>\[\033[0m\] "'
+#https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+        RED="\[\033[0;31m\]"
+     YELLOW="\[\033[1;33m\]"
+      GREEN="\[\033[0;32m\]"
+       BLUE="\[\033[1;34m\]"
+     PURPLE="\[\033[0;35m\]"
+  LIGHT_RED="\[\033[1;31m\]"
+LIGHT_GREEN="\[\033[1;32m\]"
+      WHITE="\[\033[1;37m\]"
+ LIGHT_GRAY="\[\033[0;37m\]"
+ COLOR_NONE="\[\e[0m\]"
+
+function virtualenv_info(){
+    # Get Virtual Env
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        # Strip out the path and just leave the env name
+        venv="${VIRTUAL_ENV##*/}"
+    else
+        # In case you don't have one activated
+        venv=''
+    fi
+    # [[ -n "$venv" ]] && echo "(venv:$venv) "
+    [[ -n "$venv" ]] && echo "($venv) "
+}
+# disable the default virtualenv prompt change
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+VENV="\$(virtualenv_info)";
+
+PROMPT_COMMAND='PS1="${VENV}${YELLOW}H\!${PURPLE}J\j\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; else echo "\\[\\033[31m\\]"; fi\``/bin/ls -1 | /usr/bin/wc -l | /bin/sed "s: ::g"`files@`/bin/ls -lah | /bin/grep -m 1 total | /bin/sed "s/total //"`${WHITE}:${BLUE}\`if [[ `pwd|wc -c|tr -d " "` > 18 ]]; then echo "\\W"; else echo "\\w"; fi\`${LIGHT_GRAY}>${COLOR_NAME} "'
 
 #less
 export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
