@@ -28,6 +28,9 @@ alias helpme='helpme_f'
 # ssh with a specific key
 alias sshkey='ssh -o "IdentitiesOnly=yes" -i ' # sshkey <key> <hostname>
 alias scpkey='scp -r -o "IdentitiesOnly=yes" -i ' # fetch: scpkey <key> <hostname>:<remote_directory> <local_directory>
+# ssh agent
+alias sshagent='eval "$(ssh-agent -s)"'
+alias sshadd='ssh-add'
 
 # git
 alias ci='git commit -a'
