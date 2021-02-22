@@ -11,8 +11,9 @@ export ZSH="/home/$USER/.oh-my-zsh"
 #ZSH_THEME="robbyrussell" # Default
 #export ZSH_THEME=af-magic # Really nice but with login name at the right
 # export ZSH_THEME=agnoster # Heavvvvy
-export ZSH_THEME=gallois # Really nice with brance name at the right
+# export ZSH_THEME=gallois # Really nice with brance name at the right
 #export ZSH_THEME=terminalparty
+export ZSH_THEME=muse
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -74,7 +75,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
