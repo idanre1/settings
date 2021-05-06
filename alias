@@ -38,6 +38,8 @@ alias ci='git commit -a'
 # systemctl
 alias st='sudo systemctl status'
 alias ctl='sudo systemctl'
+alias ctl_reload='sudo systemctl daemon-reload'
+alias ctl_timers='systemctl list-timers --all'
 #alias log='journalctl -xe'
 # -f as "-F" in LESS
 alias log='journalctl -b -xe -l --no-pager'
