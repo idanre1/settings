@@ -40,9 +40,12 @@ alias dvc_credentials='source ~/azure-env-crypt/env_from_aes_file.sh'
 # systemctl
 alias st='sudo systemctl status'
 alias ctl='sudo systemctl'
+alias ctl_reload='sudo systemctl daemon-reload'
+alias ctl_timers='systemctl list-timers --all'
 #alias log='journalctl -xe'
 # -f as "-F" in LESS
-alias log='journalctl -b -xe -l --no-pager'
+alias log_cat='journalctl -b -xe -l --no-pager'
+alias log='journalctl -b -x -l'
 
 # X11
 alias sux11='sudo xauth add $(xauth -f ~linaro/.Xauthority list|tail -1)'
