@@ -1,6 +1,8 @@
 #!/bin/sh
+# tiny install
 #echo source ~/settings/bashrc >> ~/.bashrc
 #echo source ~/settings/vimrc >> ~/.vimrc
+#sudo ln -s ~ /nas
 
 #PATH
 PATH=.:$PATH:/nas/scripts
