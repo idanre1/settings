@@ -1,4 +1,6 @@
 #!/bin/sh
+#echo source ~/settings/bashrc >> ~/.bashrc
+#echo source ~/settings/vimrc >> ~/.vimrc
 
 #PATH
 PATH=.:$PATH:/nas/scripts
