@@ -2,6 +2,7 @@
 # tiny install
 #echo source ~/settings/bashrc >> ~/.bashrc
 #echo source ~/settings/vimrc >> ~/.vimrc
+#sudo sh -c "echo 'set background=dark' >> /root/.vimrc"
 #sudo ln -s ~ /nas
 #sudo apt install source-highlight 
 
