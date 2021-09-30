@@ -15,6 +15,12 @@ alias bgrun='nohup ' #https://askubuntu.com/questions/8653/how-to-keep-processes
 alias gitssh='eval $(ssh-agent -s); ssh-add ~/.ssh/gitea'
 alias ci='git add .; git commit .'
 
+# real path
+real_path_f() {
+perl -e 'use Cwd qw(abs_path); $n=shift; print(abs_path($n), qq(\n));' $1
+}
+alias rp='real_path_f'
+
 # python
 source ~/settings/python_init.sh
 
