@@ -42,6 +42,12 @@ alias sshadd='ls -1 ~/.ssh; read F; ssh-add ~/.ssh/$F'
 alias ci='git commit -a'
 # dvc
 alias dvc_credentials='source ~/azure-env-crypt/env_from_aes_file.sh'
+dvc_ci() {
+    dvc add $*
+    git commit
+    git push
+    dvc push
+}
 
 # systemctl
 alias st='sudo systemctl status'
