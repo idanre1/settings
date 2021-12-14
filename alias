@@ -75,7 +75,11 @@ alias apt-yes='sudo DEBIAN_FRONTEND=noninteractive apt-get -y '
 
 # Docker
 alias dc='docker'
+alias dcr='docker run -d'
 alias dcps='docker ps -a'
 alias dcim='docker images -a'
 alias dcrm='docker rm -f $(docker ps -a -q)'
 alias dcrmi='docker rmi -f $(docker images -a -q)'
+dcsh() {
+    docker exec -it $* /bin/sh
+}
