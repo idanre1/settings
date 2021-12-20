@@ -65,11 +65,21 @@ alias sux11='sudo xauth add $(xauth -f ~linaro/.Xauthority list|tail -1)'
 # apt-get
 alias apt-yes='sudo DEBIAN_FRONTEND=noninteractive apt-get -y '
 
-# Arduino
-alias ard-up='make FLOW=ARD upload reset_stty'
-alias ard-mon='make FLOW=ARD monitor'
-alias ard-uno='export BOARD_TAG=uno; export MONITOR_PORT=/dev/ttyACM0'
+# # Arduino
+# alias ard-up='make FLOW=ARD upload reset_stty'
+# alias ard-mon='make FLOW=ARD monitor'
+# alias ard-uno='export BOARD_TAG=uno; export MONITOR_PORT=/dev/ttyACM0'
 
-# Ansible
-alias an='ansible -i /nas/settings/ansible/inventory.cfg all -u linaro '
+# # Ansible
+# alias an='ansible -i /nas/settings/ansible/inventory.cfg all -u linaro '
 
+# Docker
+alias dc='docker'
+alias dcr='docker run -d'
+alias dcps='docker ps -a'
+alias dcim='docker images -a'
+alias dcrm='docker rm -f $(docker ps -a -q)'
+alias dcrmi='docker rmi -f $(docker images -a -q)'
+dcsh() {
+    docker exec -it $* /bin/sh
+}
