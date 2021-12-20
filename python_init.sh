@@ -11,3 +11,6 @@ alias py3mlfinlab='cd $mlfinlabbin; source activate; cd -'
 
 # rapids python virtualenv
 alias py3rapids='source ~/miniconda3/etc/profile.d/conda.sh; conda activate rapids-21.10'
+
+# poetry
+alias poetry=/home/$USER/.local/bin/poetry
