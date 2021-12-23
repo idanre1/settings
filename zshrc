@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -13,7 +20,8 @@ export ZSH="/home/$USER/.oh-my-zsh"
 # export ZSH_THEME=agnoster # Heavvvvy
 # export ZSH_THEME=gallois # Really nice with brance name at the right
 #export ZSH_THEME=terminalparty
-export ZSH_THEME=muse
+# export ZSH_THEME=muse
+export ZSH_THEME=powerlevel10k/powerlevel10k
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -104,4 +112,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+fpath=(/nas/settings/zshcomp $fpath)
+alias ls='/nas/settings/exa'
 source /home/$USER/settings/bashrc
+source /home/$USER/settings/zshrc-custom
+source /home/$USER/settings/zshrc-p10k

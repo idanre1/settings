@@ -83,3 +83,4 @@ alias dcrmi='docker rmi -f $(docker images -a -q)'
 dcsh() {
     docker exec -it $* /bin/sh
 }
+alias k='kubectl'
