@@ -1,16 +1,14 @@
-alias py3='/usr/bin/python3'
-alias nb='jupyter lab &'
 
 # Default python virtualenv
-py3bin=/home/$USER/py3env/bin
+py3bin=/home/$USER/Envs/py3env/bin
 alias py3env='cd $py3bin; source activate; cd -'
 
-# mlfinlab python virtualenv
-mlfinlabbin=/home/$USER/py3mlfinlab/bin
-alias py3mlfinlab='cd $mlfinlabbin; source activate; cd -'
+# pytorch python virtualenv
+py3torchbin=/home/$USER/Envs/py3torch/bin
+alias py3torch='cd $py3torchbin; source activate; cd -'
 
 # rapids python virtualenv
-alias py3rapids='source ~/miniconda3/etc/profile.d/conda.sh; conda activate rapids-21.10'
+alias py3gpu='source ~/miniconda3/etc/profile.d/conda.sh; conda activate rapids-21.10'
 
 # poetry
 alias poetry=/home/$USER/.local/bin/poetry
