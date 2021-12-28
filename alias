@@ -83,4 +83,8 @@ alias dcrmi='docker rmi -f $(docker images -a -q)'
 dcsh() {
     docker exec -it $* /bin/sh
 }
+alias kterm='source <(kubectl completion zsh)'
 alias k='kubectl'
+alias kgp='kubectl get pods -w -o wide'
+alias kn='kubectl config set-context --current --namespace'
+alias kprm='kubectl delete --all pods' # --namespace=foo
