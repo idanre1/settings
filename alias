@@ -1,6 +1,7 @@
 
 # shell
 alias l='less'
+alias ls='/nas/settings/exa'
 alias la='ls -lah'
 alias lr='la -tr'
 alias sa='source /nas/settings/alias'

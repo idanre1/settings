@@ -113,7 +113,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 fpath=(/nas/settings/zshcomp $fpath)
-alias ls='/nas/settings/exa'
 source /home/$USER/settings/bashrc
 source /home/$USER/settings/zshrc-custom
 source /home/$USER/settings/zshrc-p10k
