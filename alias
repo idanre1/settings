@@ -1,10 +1,16 @@
 
 # shell
+alias sa='source /nas/settings/alias'
 alias l='less'
-alias ls='/nas/settings/exa'
+
+if [[ $arch -eq 'aarch64' ]]; then
+    alias ls='/nas/settings/exa_aarch64'
+else
+    alias ls='/nas/settings/exa'
+fi
 alias la='ls -lah'
 alias lr='la -tr'
-alias sa='source /nas/settings/alias'
+
 alias ttar='tar -czf'   # .tar.gz
 alias untar='tar -xzf'
 alias ttar2='tar -cjf'  # .tar.bz
