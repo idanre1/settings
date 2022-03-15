@@ -4,7 +4,7 @@ alias sa='source /nas/settings/alias'
 alias l='less'
 
 arch=`arch`
-if [[ $arch -eq 'aarch64' ]]; then
+if [[ $arch  == 'aarch64' ]]; then
     alias ls='/nas/settings/exa_aarch64 --icons --git '
 else
     alias ls='/nas/settings/exa --icons --git '
