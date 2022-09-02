@@ -32,7 +32,7 @@ alias rp='real_path_f'
 
 # watch file last lines progress
 w() {
-	watch -n 0.5 "cat $1 | tail -60"
+	watch -n 0.5 "cat $1 | tail -45"
 }
 
 # python
