@@ -26,9 +26,14 @@ alias push='git remote | xargs -L1 -I R git push R' # push <branch>
 
 # real path
 real_path_f() {
-perl -e 'use Cwd qw(abs_path); $n=shift; print(abs_path($n), qq(\n));' $1
+	perl -e 'use Cwd qw(abs_path); $n=shift; print(abs_path($n), qq(\n));' $1
 }
 alias rp='real_path_f'
+
+# watch file last lines progress
+w() {
+	watch -n 0.5 "cat $1 | tail -60"
+}
 
 # python
 source ~/settings/python_init.sh
