@@ -94,9 +94,13 @@ alias dcps='docker ps -a'
 alias dcim='docker images -a'
 alias dcrm='docker rm -f $(docker ps -a -q)'
 alias dcrmi='docker rmi -f $(docker images -a -q)'
+#dcsh <container>
 dcsh() {
     docker exec -it $* /bin/sh
 }
+#dcbash <image>
+alias dcbash='docker run -it --entrypoint /bin/bash'
+
 alias kterm='source <(kubectl completion zsh)'
 alias k='kubectl'
 alias kls='k get all -A'
