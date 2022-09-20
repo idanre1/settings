@@ -100,6 +100,10 @@ dcsh() {
 }
 #dcbash <image>
 alias dcbash='docker run -it --entrypoint /bin/bash'
+dcprune() {
+    docker container prune
+    docker volume prune
+}
 
 alias kterm='source <(kubectl completion zsh)'
 alias k='kubectl'
