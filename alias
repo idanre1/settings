@@ -11,6 +11,7 @@ else
 fi
 alias la='ls -lah'
 alias lr='la -tr'
+alias lr='ls -lah --sort oldest'
 
 alias ttar='tar -czf'   # .tar.gz
 alias untar='tar -xzf'
