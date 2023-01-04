@@ -39,6 +39,9 @@ w() {
 # python
 source ~/settings/python_init.sh
 
+# sudo apt install libheif-examples
+alias heic='for f in *.heic; do heif-convert -q 100 $f $f.jpg; done'
+
 #help
 helpme_f() {
 grep "$*" /help
