@@ -40,7 +40,7 @@ w() {
 source ~/settings/python_init.sh
 
 # sudo apt install libheif-examples
-alias heic='for f in *.heic; do heif-convert -q 100 $f $f.jpg; done'
+alias heic='for f in *.heic; do heif-convert -q 100 $f; done'
 
 #help
 helpme_f() {
