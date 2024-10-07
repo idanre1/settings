@@ -70,3 +70,9 @@ set matchbeep=never  #{never|nomatch|ambiguous|notunique}                 # Spec
 set color                                                                 # Turn on color for ls-F, ls, or both. Setting to nothing is equivalent to setting for both.
 #set listmax = 10000                                                      # listmax     can be set to limit the number of items that are listed without asking first. 
 set listmaxrows = 33                                                      # listmaxrows can be set to limit the number of rows  that are listed without asking first.
+
+# SSH session
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  # This is a SSH session:
+  export GPG_TTY=$(tty)
+fi
