@@ -58,6 +58,7 @@ alias sshadd='ls -1 ~/.ssh; read F; ssh-add ~/.ssh/$F'
 
 # git
 alias ci='git commit -a'
+alias sshtty='export GPG_TTY=$(tty)'
 # dvc
 alias dvc_credentials='source ~/azure_scripts/env_from_aes_file.sh'
 dvc_ci() {
