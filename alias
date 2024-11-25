@@ -64,7 +64,9 @@ alias dvc_credentials='source ~/azure_scripts/env_from_aes_file.sh'
 dvc_ci() {
     dvc add $*
     git commit
+    echo "*** git push"
     git push
+    echo "*** dvc push"
     dvc push
 }
 
