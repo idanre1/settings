@@ -1,13 +1,22 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": "/nas/settings"
 		},
 		{
-			"path": "../scripts"
+			"path": "/nas/scripts"
 		},
 		{
-			"path": "../.oh-my-zsh/custom"
+			"path": "/nas/.oh-my-zsh/custom"
+		},
+		{
+			"path": "/nas/azure_scripts"
+		},
+		{
+			"path": "/nas/python_lib"
+		},
+		{
+			"path": "/nas/python_lib/azure_env_crypt"
 		}
 	],
 	"settings": {}

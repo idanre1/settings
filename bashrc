@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # tiny install
 #echo source ~/settings/bashrc >> ~/.bashrc
 #echo source ~/settings/vimrc >> ~/.vimrc
@@ -25,6 +25,9 @@ LIGHT_GREEN="\[\033[1;32m\]"
       WHITE="\[\033[1;37m\]"
  LIGHT_GRAY="\[\033[0;37m\]"
  COLOR_NONE="\[\e[0m\]"
+
+# python
+source ~/settings/python_init.sh
 
 function virtualenv_info(){
     # Get Virtual Env
