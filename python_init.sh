@@ -7,6 +7,8 @@ function miniconda_init_f(){
         source $conda_sh
     fi
 }
+miniconda_init_f
+
 # Default python virtualenv
 py3bin=/home/$USER/miniconda3/envs/py3env/bin
 alias py3env='miniconda_init_f; conda activate py3env'
