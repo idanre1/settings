@@ -123,3 +123,6 @@ fpath=(/nas/settings/zshcomp $fpath)
 source /home/$USER/settings/bashrc
 source /home/$USER/settings/zshrc-custom
 source /home/$USER/settings/zshrc-p10k
+
+# uv
+. "$HOME/.local/bin/env"
