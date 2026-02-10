@@ -83,11 +83,17 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenv zsh-autosuggestions)
-plugins=($plugins zsh-syntax-highlighting virtualenv fast-syntax-highlighting)
-plugins=($plugins zsh-autocomplete)
+plugins=(git virtualenv)
+# plugins=(fzf-tab) # must come before zsh-autosuggestions
+plugins=(zsh-autosuggestions)
+# plugins=(fzf)
+plugins=($plugins zsh-syntax-highlighting fast-syntax-highlighting)
 plugins=($plugins colorize)
+# very combersome plugins
+# plugins=($plugins zsh-autocomplete)
+# export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
+source /home/$USER/settings/zshrc-custom
 source $ZSH/oh-my-zsh.sh
 
 # Plugins configuration
@@ -121,8 +127,7 @@ COMPLETION_WAITING_DOTS="true"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 fpath=(/nas/settings/zshcomp $fpath)
 source /home/$USER/settings/bashrc
-source /home/$USER/settings/zshrc-custom
 source /home/$USER/settings/zshrc-p10k
 
 # uv
-. "$HOME/.local/bin/env"
+# . "$HOME/.local/bin/env"
